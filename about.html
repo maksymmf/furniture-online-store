@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <title>About Us</title>
+</head>
+
+<body>
+    <div class="about-wrapper">
+        <div class="cart-wrapper">
+            <div class="cart-header">
+                <img class="close-cart" role="button" src="./img/close.png"></img>
+                <h2>Your Bag</h2>
+            </div>
+            <ul class="cart-content">
+                <!-- Dynamic data from JS -->
+            </ul>
+            <div class="cart-footer">
+                <h2 class="total">Total:<span class="total-amount"></span></h2>
+                <button class="checkout-button">checkout</button>
+            </div>
+        </div>
+        <header class="header">
+            <div class="nav-burger-wrapper">
+                <div class="nav-burger">
+                    <span></span>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./about.html" class="about">About</a></li>
+                </ul>
+            </nav>
+            <strong class="logo">
+                <a href="./index.html">
+                    <img src="./img/logo-black.png" alt="logo-img">
+                </a>
+            </strong>
+            <div class="cart-icon-wrapper">
+                <a class="cart-icon">
+                    <span class="cart-icon-amount"></span>
+                </a>
+            </div>
+        </header>
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li>About Us</li>
+            </ul>
+        </nav>
+        <div class="main">
+            <h1>Our History</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Semper eget duis at tellus at. Eu turpis egestas pretium aenean pharetra magna ac
+                placerat. Ac felis donec et odio pellentesque. Tincidunt nunc pulvinar sapien et ligula ullamcorper
+                malesuada proin libero. Laoreet non curabitur gravida arcu ac tortor dignissim convallis. Nec dui nunc
+                mattis enim ut tellus. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum. Phasellus
+                faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Arcu cursus euismod quis
+                viverra. Orci nulla pellentesque dignissim enim sit amet. Ac odio tempor orci dapibus ultrices in.
+                Convallis posuere morbi leo urna.</p>
+        </div>
+    </div>
+
+    <script src="./js/burger.js"></script>
+    <script type="module" src="./js/cart.js"></script>
+</body>
+
+</html>

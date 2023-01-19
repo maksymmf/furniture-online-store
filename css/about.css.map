@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/about.scss","../scss/_vars.scss","../scss/breakpoints.scss"],"names":[],"mappings":"AAGA;EACI;EACA;;AAEA;EACI,OCHM;;ADMV;EACI;;AAGJ;EACI;EACA;EACA;EACA;;AELJ;EFCA;IAOQ;;;AAGJ;EACI;EACA,OCtBE;EDuBF;EACA;;AAEA;EACI;EACA,OCxBF;;AD4BN;EACI,OCnCM;EDoCN","file":"about.css"}

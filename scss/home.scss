@@ -1,0 +1,167 @@
+@import '_vars';
+@import 'breakpoints';
+
+.home-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .main {
+        width: 100%;
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient($black-color-darker, $black-color-lighter), url('../img/cosy.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include md {
+            height: 100vh;
+        }
+
+        .header {
+            .nav-burger-wrapper {
+                .nav-burger {
+                    &:before, &:after {
+                        background-color: $white-color;
+                    }
+
+                    span {
+                        background-color: $white-color;
+                    }
+                }
+            }
+            .nav {
+                @include md {
+                    background-color: $brown-color;
+                }
+                li {
+                    a {
+                        color: $white-color;
+                    }
+
+                    .home {
+                        border-bottom: 1px solid $white-color;
+                    }
+                }
+            }
+
+            .cart-icon-wrapper {
+                .cart-icon {
+                    background-image: url("../img/cart.png");
+                }
+            }
+        }
+
+        .slogan {
+            padding: 6rem 0 0 7rem;
+            display: flex;
+            flex-direction: column;
+            color: $white-color; 
+
+            @include md {
+                padding: 14rem 0 0 6rem;
+            }
+
+            @include sm {
+                padding: 12rem 4rem 0 4rem;
+            }
+
+            @include xs {
+                padding: 8rem 2rem 0 2rem;
+            }
+
+            h1 {
+                margin-bottom: .3rem;
+                font-size: 2.5rem;
+                font-family: $secondary-font;
+
+                @include md {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            h3 {
+                margin-bottom: .7rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+
+                @include md {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .show-now-button {
+                width: 100px;
+                padding: .3rem .6rem;
+                text-decoration: none;
+                font-size: .75rem;
+                text-transform: uppercase;
+                border: .1px solid $white-color;
+                border-radius: 5px;
+                background-color: transparent;
+                color: $white-color;
+                cursor: pointer;
+                transition: opacity .2s ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                    background-color: $white-transparent-color;
+                }
+
+                @include sm {
+                    padding: .5rem;
+                }
+            }
+        }
+    }
+
+    .featured {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 10rem;
+
+        @include md {
+            display: none;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+            font-size: 1.7rem;
+            color: $blue-dark-color;
+
+            &:before {
+                content: "/ ";
+                color: $brown-color;
+            }
+        }
+
+        .featured-content {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .all-products {
+            padding: .3rem .5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: .75rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $white-color;
+            background-color: $brown-color;
+            cursor: pointer;
+            transition: background-color .2s ease-in-out;
+
+            &:hover {
+                background-color: $brown-lighter-color;
+            }
+        }
+    }
+}

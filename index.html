@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="home-wrapper">
+        <div class="cart-wrapper">
+            <div class="cart-header">
+                <img class="close-cart" role="button" src="./img/close.png"></img>
+                <h2>Your Bag</h2>
+            </div>
+            <ul class="cart-content">
+                <!-- Dynamic data from JS -->
+            </ul>
+            <div class="cart-footer">
+                <h2 class="total">Total:<span class="total-amount"></span></h2>
+                <button class="checkout-button">checkout</button>
+            </div>
+        </div>
+        <div class="main">
+            <header class="header">
+                <div class="nav-burger-wrapper">
+                    <div class="nav-burger">
+                        <span></span>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./index.html" class="home">Home</a></li>
+                        <li><a href="./products.html">Products</a></li>
+                        <li><a href="./about.html">About</a></li>
+                    </ul>
+                </nav>
+                <strong class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.png" alt="logo-img">
+                    </a>
+                </strong>
+                <div class="cart-icon-wrapper">
+                    <a class="cart-icon">
+                        <span class="cart-icon-amount"></span>
+                    </a>
+                </div>
+            </header>
+            <div class="slogan">
+                <h1>Rest, Relax, Unwind</h1>
+                <h3>Embrace your choices - we do</h3>
+                <a role="button" class="show-now-button" href="./products.html">Show Now</a>
+            </div>
+        </div>
+        <div class="featured">
+            <h2>Featured</h2>
+            <ul class="featured-content">
+                <!-- Dynamic data from JS -->
+            </ul>
+            <a href="./products.html" role="button" class="all-products">all products</a>
+        </div>
+    </div>
+
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/cart.js"></script>
+    <script src="./js/burger.js"></script>
+</body>
+
+</html>

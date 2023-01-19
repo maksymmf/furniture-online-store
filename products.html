@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/products.css">
+    <title>Products</title>
+</head>
+
+<body>
+    <div class="products-wrapper">
+        <div class="cart-wrapper">
+            <div class="cart-header">
+                <img class="close-cart" role="button" src="./img/close.png"></img>
+                <h2>Your Bag</h2>
+            </div>
+            <ul class="cart-content">
+                <!-- Dynamic data from JS -->
+            </ul>
+            <div class="cart-footer">
+                <h2 class="total">Total:<span class="total-amount"></span></h2>
+                <button class="checkout-button">checkout</button>
+            </div>
+        </div>
+        <header class="header">
+            <div class="nav-burger-wrapper">
+                <div class="nav-burger">
+                    <span></span>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./products.html" class="products">Products</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
+            </nav>
+            <strong class="logo">
+                <a href="./index.html">
+                    <img src="./img/logo-black.png" alt="logo-img">
+                </a>
+            </strong>
+            <div class="cart-icon-wrapper">
+                <a class="cart-icon">
+                    <span class="cart-icon-amount"></span>
+                </a>
+            </div>
+        </header>
+        <nav class="breadcrumbs">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li>Products</li>
+            </ul>
+        </nav>
+        <div class="main">
+            <aside class="aside">
+                <input type="search" id="search" class="search" placeholder="Search...">
+                <nav class="filter">
+                    <ul>
+                        <h4>Company</h4>
+                        <li data-brand="all" class="filter-button active-li">All</li>
+                        <li data-brand="ikea" class="filter-button">Ikea</li>
+                        <li data-brand="marcos" class="filter-button">Marcos</li>
+                        <li data-brand="caressa" class="filter-button">Caressa</li>
+                        <li data-brand="liddy" class="filter-button">Liddy</li>
+                    </ul>
+                </nav>
+                <div class="range-wrapper">
+                    <label for="#range">Price</label>
+                    <input type="range" class="range-input" id="range" min="100" max="2000" value="2000" step="50">
+                    <span class="range-element">Value : 2000$</span>
+                </div>
+            </aside>
+            <ul class="content">
+                <!-- Dynamic data from JS -->
+            </ul>
+        </div>
+    </div>
+
+    <script type="module" src="./js/products.js"></script>
+    <script type="module" src="./js/cart.js"></script>
+    <script src="./js/burger.js"></script>
+</body>
+
+</html>

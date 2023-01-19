@@ -1,0 +1,37 @@
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.about-wrapper .header .nav li a {
+  color: black;
+}
+.about-wrapper .header .nav li .about {
+  border-bottom: 1px solid #344D67;
+}
+.about-wrapper .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 7rem;
+}
+@media (max-width: 1023px) {
+  .about-wrapper .main {
+    padding: 3rem 4rem;
+  }
+}
+.about-wrapper .main h1 {
+  margin-bottom: 2rem;
+  color: black;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.about-wrapper .main h1:before {
+  content: "/ ";
+  color: #B3541E;
+}
+.about-wrapper .main p {
+  color: #344D67;
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=about.css.map */

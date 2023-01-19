@@ -1,0 +1,98 @@
+[
+{
+    "id": 0,
+    "name": "Leather Bed",
+    "image": "./img/caressa-bed.webp",
+    "price": "1399.99",
+    "type": "caressa",
+    "itemsAvailable": 4
+},
+{
+    "id": 1,
+    "name": "Leather Chair",
+    "image": "./img/caressa-chair.webp",
+    "price": "199.99",
+    "type": "caressa",
+    "itemsAvailable": 8
+},
+{
+    "id": 2,
+    "name": "Bed-Constructor",
+    "image": "./img/ikea-bed.jpeg",
+    "price": "599.99",
+    "type": "ikea",
+    "itemsAvailable": 4
+},
+{
+    "id": 3,
+    "name": "Leather Sofa",
+    "image": "./img/caressa-sofa.jpeg",
+    "price": "499.99",
+    "type": "caressa",
+    "itemsAvailable": 4
+},
+{
+    "id": 4,
+    "name": "White Desk",
+    "image": "./img/ikea-desk.jpeg",
+    "price": "199.99",
+    "type": "ikea",
+    "itemsAvailable": 8
+},
+{
+    "id": 5,
+    "name": "Stylish Sofa",
+    "image": "./img/ikea-sofa.webp",
+    "price": "699.99",
+    "type": "ikea",
+    "itemsAvailable": 4
+},
+{
+    "id": 6,
+    "name": "Grey Bed",
+    "image": "./img/liddy-bed.jpeg",
+    "price": "899.99",
+    "type": "liddy",
+    "itemsAvailable": 4
+},
+{
+    "id": 7,
+    "name": "Wooden Office Desk",
+    "image": "./img/liddy-desk.webp",
+    "price": "399.99",
+    "type": "liddy",
+    "itemsAvailable": 10
+},
+{
+    "id": 8,
+    "name": "Leather Sofa",
+    "image": "./img/liddy-sofa.jpeg",
+    "price": "699.99",
+    "type": "liddy",
+    "itemsAvailable": 4
+},
+{
+    "id": 9,
+    "name": "Massive Wooden Bed",
+    "image": "./img/marcos-bed.jpeg",
+    "price": "1299.99",
+    "type": "marcos",
+    "itemsAvailable": 4
+},
+{
+    "id": 10,
+    "name": "Stylish Blue Sofa",
+    "image": "./img/marcos-sofa.jpeg",
+    "price": "899.99",
+    "type": "marcos",
+    "itemsAvailable": 4
+},
+{
+    "id": 11,
+    "name": "Whiskey Table",
+    "image": "./img/marcos-table.webp",
+    "price": "299.99",
+    "type": "marcos",
+    "itemsAvailable": 10
+}
+]

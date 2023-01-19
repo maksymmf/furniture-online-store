@@ -1,0 +1,575 @@
+@import '_vars';
+@import 'breakpoints';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: $primary-font;
+    background-color: $white-color;
+}
+
+.body-lock {
+    overflow: hidden;
+}
+
+.cart-wrapper {
+    position: fixed;
+    overflow-y: auto;
+    right: 0;
+    z-index: 6;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 100vh;
+    padding: 3rem 1rem;
+    background-color: $white-color;
+
+    @include md {
+        width: 100vw;
+        max-height: 100vh;
+        overflow: scroll ;
+    }
+
+    .cart-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .close-cart {
+            width: 5%;
+            cursor: pointer;
+
+            @include md {
+                width: 7%;
+            }
+        }
+
+        h2 {
+            align-self: center;
+            font-family: $secondary-font;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+
+            @include md {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    .cart-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .cart-item {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+
+            img {
+                width: 100px;
+                height: 60px;
+                margin-right: .8rem;
+                border-radius: 5px;
+
+                @include md {
+                    width: 130px;
+                    height: 90px;
+                }
+
+                @include xs {
+                    width: 110px;
+                    height: 70px;
+                }
+            }
+
+            .name-price-remove {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                p {
+                    color: $black-color;
+                }
+    
+                .name {
+                    font-size: .9rem;
+
+                    @include md {
+                        font-size: 1.2rem;
+                    }
+
+                    @include xs {
+                        font-size: 1rem;
+                    }
+                }
+    
+                .price {
+                    font-size: .8rem;
+                    margin-top: .1rem;
+
+                    @include md {
+                        font-size: 1.2rem;
+                    }
+
+                    @include xs {
+                        font-size: 1rem;
+                    }
+                }
+    
+                .remove {
+                    margin-top: .5rem;
+                    color: $blue-dark-color;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: .5;
+                    }
+
+                    @include md {
+                        margin-top: 1rem;
+                        font-size: 1.2rem;
+                    }
+
+                    @include xs {
+                        margin-top: .3rem;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .counter {
+                margin-left: auto;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+
+                @include md {
+                    justify-content: space-between;
+                }
+
+                .arrow-up, .arrow-down {
+                    font-size: 1.1rem;
+                    color: $brown-color;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        font-weight: bold;
+                    }
+
+                    @include md {
+                        font-size: 1.6rem;
+                        font-weight: bolder;
+                    }
+
+                    @include xs {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .items-available {
+                    font-size: .9rem;
+                    color: $blue-dark-color;
+
+                    @include md {
+                        font-size: 1.2rem;
+                    }
+
+                    @include xs {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .cart-footer {
+        width: 100%;
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .total {
+            font-size: 1.8rem;
+            font-family: $secondary-font;
+            margin-bottom: 1rem;
+
+            @include md {
+                font-size: 2rem;
+            }
+        }
+
+        .checkout-button {
+            width: 50%;
+            margin-top: auto;
+            padding: .2rem;
+            border: none;
+            color: $white-color;
+            background-color: $brown-color;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color .2s ease-in-out;
+
+            &:hover {
+                background-color: $brown-lighter-color;
+            }
+
+            @include md {
+                font-size: 1.2rem;
+                padding: .5rem;
+            }
+        }
+    }
+}
+
+.cart-wrapper-display {
+    display: flex;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 7rem;
+
+    @include md {
+        padding: 0;
+    }
+
+    .nav-burger-wrapper {
+        display: none;
+        flex: 1 1 25%;
+        cursor: pointer;
+        transition: opacity .2s ease-in-out;
+
+        &:hover {
+            opacity: .5;
+        }
+
+        @include md {
+            display: flex;
+            padding: 2rem 0 0 6rem;
+            z-index: 5;
+        }
+
+        @include sm {
+            padding: 2rem 0 0 4rem;
+        }
+
+        @include xs {
+            padding: 2rem 0 0 2rem;
+        }
+
+        .nav-burger {
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 30px;
+            margin-top: .5rem;
+    
+            &:before, &:after {
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                content: "";
+                background-color: $black-color;
+                transition: all .2s ease-in-out;
+            }
+
+            &:before {
+                top: 0;
+            }
+
+            &:after {
+                bottom: 0;
+            }
+    
+            span {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                height: 2px;
+                content: "";
+                background-color: $black-color;
+                transition: all .2s ease-in-out;
+            }
+        }
+
+        .nav-burger-active {
+            &:before {
+                top: 15px;
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                top: 15px;
+                transform: rotate(-45deg);
+            }
+
+            span {
+                transform: scale(0);
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        flex: 1 1 25%;
+
+        @include md {
+            position: absolute;
+            z-index: 4;
+            display: none;
+            height: 100vh;
+            width: 100vw;
+            background-color: $blue-light-color;
+        }
+
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+
+            @include md {
+                margin-top: 10rem;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            li {
+                margin-left: .5rem;
+                transition: opacity .2s ease-in-out;
+
+                @include md {
+                    margin: 3rem 0 0 0;
+                }
+
+                &:first-of-type {
+                    margin-left: 0;
+                }
+
+                &:hover {
+                    opacity: .5;
+                }
+
+                a {
+                    color: $white-color;
+
+                    @include md {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-active {
+        display: block;
+    }
+}
+
+a {
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity .2s ease-in-out;
+}
+
+.logo {
+    display: flex;
+    flex: 1 1 25%;
+    justify-content: center;
+
+    @include md {
+        padding-top: 2rem;
+        z-index: 5;
+    }
+
+    a {
+        img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: opacity .2s ease-in-out;
+    
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+}
+
+.cart-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%;
+    align-items: flex-end;
+
+    @include md {
+        padding: 2rem 6rem 0 0;
+        z-index: 5;
+    }
+
+    @include sm {
+        padding: 2rem 4rem 0 0;
+    }
+
+    @include xs {
+        padding: 2rem 2rem 0 0;
+    }
+
+    .cart-icon {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/cart-black.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: opacity .3s ease-in-out;
+    
+        &:hover {
+            opacity: .5;
+        }
+    
+        .cart-amount-added {
+            position: absolute;
+            background-color: $brown-color;
+            width: 20px;
+            height: 20px;
+            font-size: .75rem;
+            border-radius: 50%;
+            color: $white-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: -10px;
+            top: -7px;
+        }
+    }
+}
+
+.breadcrumbs {
+    padding: 4rem 7rem;
+    margin-bottom: 2rem;
+    background-color: $blue-light-color;
+
+    @include md {
+        padding: 2rem 0 0 6rem;
+        margin-bottom: 0;
+        background-color: transparent;
+    }
+
+    @include sm {
+        padding: 2rem 0 0 4rem;
+    }
+
+    @include xs {
+        padding: 2rem 0 0 2rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        
+        li {
+            margin-right: .4rem;
+            list-style: none;
+            font-size: 1.5rem;
+            color: $blue-dark-color;
+
+            &:after {
+                content: " /";
+            }
+
+            &:last-of-type:after {
+                content: "";
+            }
+
+            @include sm {
+                font-size: 1.2rem;
+            }
+
+            a {
+                color: $blue-dark-color;
+                font-size: 1.5rem;
+                cursor: pointer;
+                transition: opacity .2s ease-in-out;
+
+                &:hover {
+                    opacity: .5;
+                }
+
+                @include sm {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        width: 240px;
+        height: 160px;
+        margin-bottom: .3rem;
+        border-radius: 7px;
+    }
+
+    p {
+        margin-bottom: .1rem;
+        color: $blue-dark-color;
+        font-size: .9rem;
+
+        &:last-of-type {
+            margin-bottom: .3rem;
+            font-weight: 550;
+            color: $black-color;
+        }
+    }
+
+    .buy-button {
+        padding: .1rem 1rem;
+        color: $white-color;
+        background-color: $brown-color;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out;
+
+        &:hover {
+            background-color: $brown-lighter-color;
+        }
+    }
+}
+
+.not-enough-items {
+    background-color: red;
+}

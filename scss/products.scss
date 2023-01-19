@@ -1,0 +1,170 @@
+@import '_vars';
+@import 'breakpoints';
+
+.products-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .header .nav ul li a {
+        color: $black-color;
+    }
+
+    .header .nav ul li .products {
+        border-bottom: 1px solid $blue-dark-color;
+    }
+
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 7rem;
+
+        @include md {
+            flex-direction: column;
+            padding: 2rem 6rem 0 6rem;
+        }
+
+        @include sm {
+            padding: 2rem 4rem 2rem 4rem;
+        }
+
+        @include xs {
+            padding: 2rem 2rem 2rem 2rem;
+        }
+
+        .aside {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 20%;
+            margin-right: 2rem;
+
+            @include md {
+                flex: 1 1 100%;
+                margin: 0 0 2rem 0;
+            }
+
+            .search {
+                width: 240px;
+                margin-bottom: 1.2rem;
+                padding: .5rem 1rem;
+                font-size: .95rem;
+                border-radius: 5px;
+                color: $black-color;
+                background-color: $blue-light-color;
+                border: none;
+                outline: none;
+
+                @include md {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .filter {
+                ul {
+                    margin-bottom: 1.2rem;
+                    font-size: .9rem;
+                    color: $black-color;
+                    font-weight: 550;
+
+                    @include md {
+                        margin-bottom: 1rem;
+                    }
+
+                    @include md {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+
+                    .active-li {
+                        font-weight: bolder;
+                    }
+
+                    h4 {
+                        margin-bottom: .7rem;
+                        color: $black-color;
+                        font-size: 1rem;
+                        color: $black-color;
+
+                        @include md {
+                            display: none;
+                        }
+                    }
+
+                    li {
+                        margin-bottom: .7rem;
+                        color: $blue-dark-color;
+                        font-size: .9rem;
+                        font-weight: 200;
+                        list-style: none;
+                        cursor: pointer;
+                        transition: opacity .2s ease-in-out;
+    
+                        &:hover {
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+
+            .range-wrapper {
+                display: flex;
+                flex-direction: column;
+
+                @include md {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                label {
+                    margin-bottom: .5rem;
+                    color: $black-color;
+                    font-size: .9rem;
+                    font-weight: 550;
+                }
+
+                .range-input {
+                    margin-bottom: .5rem;
+                    width: 240px;
+
+                    @include md {
+                        width: 50%;
+                    }
+
+                    @include xs {
+                        width: 40%;
+                    }
+                }
+
+                .range-element {
+                    color: $blue-dark-color;
+                    font-size: .9rem;
+                    font-weight: 200;
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            flex: 1 1 80%;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 2rem;
+
+            @include md {
+                flex: 1 1 100%;
+                justify-content: space-between;
+            }
+
+            @include sm {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
